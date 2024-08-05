@@ -72,22 +72,23 @@ def check_more_col(col,board):
                         row_val = k
             if count == 1:                 
                 board[row_val][col] = i
-                print("helo")
-                                
                 
                                 
+                
+# def box_solver(row,col,board):
+
             
     
 
 def solve():
-    for row in range(4,5):        
+    for row in range(9):        
         for col in range(9):
             if board[row][col] == 0:                
                 # check_row(row,col,board)
                 # check_col(row,col,board)
                 # check_box(row,col,board)
-                # check_more_row(row,board)
-                check_more_col(col,board)
+                check_more_row(row,board)
+                # check_more_col(col,board)
                 
                 
                 
@@ -128,18 +129,28 @@ column_array = [
     []
 ]
 
+# board = [
+#     [0, 6, 9, 7, 5, 0, 8, 0, 2],
+#     [0, 8, 0, 0, 9, 3, 0, 0, 0],
+#     [7, 0, 0, 0, 8, 2, 0, 9, 6],
+#     [0, 0, 0, 5, 0, 0, 0, 0, 0],
+#     [0, 5, 0, 3, 0, 7, 4, 0, 9],
+#     [3, 4, 7, 0, 2, 9, 0, 0, 1],
+#     [8, 7, 2, 0, 4, 5, 0, 1, 3],
+#     [0, 0, 0, 0, 3, 8, 0, 5, 0],
+#     [5, 0, 0, 2, 0, 0, 0, 0, 0]
+# ]
 board = [
-    [0, 6, 9, 7, 5, 0, 8, 0, 2],
-    [0, 8, 0, 0, 9, 3, 0, 0, 0],
-    [7, 0, 0, 0, 8, 2, 0, 9, 6],
-    [0, 0, 0, 5, 0, 0, 0, 0, 0],
-    [0, 5, 0, 3, 0, 7, 4, 0, 9],
-    [3, 4, 7, 0, 2, 9, 0, 0, 1],
-    [8, 7, 2, 0, 4, 5, 0, 1, 3],
-    [0, 0, 0, 0, 3, 8, 0, 5, 0],
-    [5, 0, 0, 2, 0, 0, 0, 0, 0]
+    [0, 6, 9, 7, 5, 0, 8, 3, 2],
+[2, 8, 0, 6, 9, 3, 7, 0, 5],
+[7, 0, 5, 4, 8, 2, 1, 9, 6],
+[9, 2, 0, 5, 0, 4, 3, 0, 8],
+[0, 5, 8, 3, 0, 7, 4, 2, 9],
+[3, 4, 7, 8, 2, 9, 5, 6, 1],
+[8, 7, 2, 9, 4, 5, 0, 1, 3],
+[0, 0, 0, 1, 3, 8, 2, 5, 7],
+[5, 0, 3, 2, 7, 6, 0, 0, 4]
 ]
-
 
 fill_element(board)
 solve()
